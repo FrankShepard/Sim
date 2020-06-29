@@ -5,8 +5,778 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sim"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="音源仿真" Height="600" Width="850">
+	<Grid>
+		<TabControl HorizontalAlignment="Center" Height="550"   Margin="6" VerticalAlignment="Top" Width="820">
+			<TabItem Header="音源实时状态">
+				<Grid Background="LightSkyBlue">	
+					<TabControl HorizontalAlignment="Center" Height="510" Margin="7,5,7,0" VerticalAlignment="Top" Width="800">
+						<TabItem Header="分区通断状态(勾选为通)">
+							<Grid Background="#FFE5E5E5">
+								<WrapPanel Height="auto"  Margin="0,0,174,0" Width="auto" HorizontalAlignment ="Stretch" VerticalAlignment="Stretch" >
+									<CheckBox Content="分区001" IsChecked="True"   Margin="6"/>
+									<CheckBox Content="分区002"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区003"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区004"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区005"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区006"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区007"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区008"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区009"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区010"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区011"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区012"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区013"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区014"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区015"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区016"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区017"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区018"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区019"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区020"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区021"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区022"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区023"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区024"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区025"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区026"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区027"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区028"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区029"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区030"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区031"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区032"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区033"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区034"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区035"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区036"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区037"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区038"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区039"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区040"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区041"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区042"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区043"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区044"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区045"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区046"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区047"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区048"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区049"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区050"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区051"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区052"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区053"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区054"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区055"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区056"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区057"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区058"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区059"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区060"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区061"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区062"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区063"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区064"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区066"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区066"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区067"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区068"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区069"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区070"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区071"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区072"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区073"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区074"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区075"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区076"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区077"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区078"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区079"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区080"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区081"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区082"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区083"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区084"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区085"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区086"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区087"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区088"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区089"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区090"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区091"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区092"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区093"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区094"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区095"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区096"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区097"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区098"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区099"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区100"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区101"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区102"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区103"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区104"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区105"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区106"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区107"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区108"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区109"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区110"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区111"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区112"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区113"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区114"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区115"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区116"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区117"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区118"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区119"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区120"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区121"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区122"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区123"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区124"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区125"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区126"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区127"  IsChecked="True"  Margin="6"/>
+									<CheckBox Content="分区128"  IsChecked="True"  Margin="6"/>
+								</WrapPanel>
+							</Grid>
+						</TabItem>
+						<TabItem Header="分区屏蔽状态(勾选为屏蔽)">
+							<Grid Background="#FFE5E5E5">
+								<WrapPanel Height="auto"  Margin="0,0,174,0" Width="auto" HorizontalAlignment ="Stretch" VerticalAlignment="Stretch" >
+									<CheckBox Content="分区001"   Margin="6"/>
+									<CheckBox Content="分区002"   Margin="6"/>
+									<CheckBox Content="分区003"   Margin="6"/>
+									<CheckBox Content="分区004"   Margin="6"/>
+									<CheckBox Content="分区005"   Margin="6"/>
+									<CheckBox Content="分区006"   Margin="6"/>
+									<CheckBox Content="分区007"   Margin="6"/>
+									<CheckBox Content="分区008"   Margin="6"/>
+									<CheckBox Content="分区009"   Margin="6"/>
+									<CheckBox Content="分区010"   Margin="6"/>
+									<CheckBox Content="分区011"   Margin="6"/>
+									<CheckBox Content="分区012"   Margin="6"/>
+									<CheckBox Content="分区013"   Margin="6"/>
+									<CheckBox Content="分区014"   Margin="6"/>
+									<CheckBox Content="分区015"   Margin="6"/>
+									<CheckBox Content="分区016"   Margin="6"/>
+									<CheckBox Content="分区017"   Margin="6"/>
+									<CheckBox Content="分区018"   Margin="6"/>
+									<CheckBox Content="分区019"   Margin="6"/>
+									<CheckBox Content="分区020"   Margin="6"/>
+									<CheckBox Content="分区021"   Margin="6"/>
+									<CheckBox Content="分区022"   Margin="6"/>
+									<CheckBox Content="分区023"   Margin="6"/>
+									<CheckBox Content="分区024"   Margin="6"/>
+									<CheckBox Content="分区025"   Margin="6"/>
+									<CheckBox Content="分区026"   Margin="6"/>
+									<CheckBox Content="分区027"   Margin="6"/>
+									<CheckBox Content="分区028"   Margin="6"/>
+									<CheckBox Content="分区029"   Margin="6"/>
+									<CheckBox Content="分区030"   Margin="6"/>
+									<CheckBox Content="分区031"   Margin="6"/>
+									<CheckBox Content="分区032"   Margin="6"/>
+									<CheckBox Content="分区033"   Margin="6"/>
+									<CheckBox Content="分区034"   Margin="6"/>
+									<CheckBox Content="分区035"   Margin="6"/>
+									<CheckBox Content="分区036"   Margin="6"/>
+									<CheckBox Content="分区037"   Margin="6"/>
+									<CheckBox Content="分区038"   Margin="6"/>
+									<CheckBox Content="分区039"   Margin="6"/>
+									<CheckBox Content="分区040"   Margin="6"/>
+									<CheckBox Content="分区041"   Margin="6"/>
+									<CheckBox Content="分区042"   Margin="6"/>
+									<CheckBox Content="分区043"   Margin="6"/>
+									<CheckBox Content="分区044"   Margin="6"/>
+									<CheckBox Content="分区045"   Margin="6"/>
+									<CheckBox Content="分区046"   Margin="6"/>
+									<CheckBox Content="分区047"   Margin="6"/>
+									<CheckBox Content="分区048"   Margin="6"/>
+									<CheckBox Content="分区049"   Margin="6"/>
+									<CheckBox Content="分区050"   Margin="6"/>
+									<CheckBox Content="分区051"   Margin="6"/>
+									<CheckBox Content="分区052"   Margin="6"/>
+									<CheckBox Content="分区053"   Margin="6"/>
+									<CheckBox Content="分区054"   Margin="6"/>
+									<CheckBox Content="分区055"   Margin="6"/>
+									<CheckBox Content="分区056"   Margin="6"/>
+									<CheckBox Content="分区057"   Margin="6"/>
+									<CheckBox Content="分区058"   Margin="6"/>
+									<CheckBox Content="分区059"   Margin="6"/>
+									<CheckBox Content="分区060"   Margin="6"/>
+									<CheckBox Content="分区061"   Margin="6"/>
+									<CheckBox Content="分区062"   Margin="6"/>
+									<CheckBox Content="分区063"   Margin="6"/>
+									<CheckBox Content="分区064"   Margin="6"/>
+									<CheckBox Content="分区066"   Margin="6"/>
+									<CheckBox Content="分区066"   Margin="6"/>
+									<CheckBox Content="分区067"   Margin="6"/>
+									<CheckBox Content="分区068"   Margin="6"/>
+									<CheckBox Content="分区069"   Margin="6"/>
+									<CheckBox Content="分区070"   Margin="6"/>
+									<CheckBox Content="分区071"   Margin="6"/>
+									<CheckBox Content="分区072"   Margin="6"/>
+									<CheckBox Content="分区073"   Margin="6"/>
+									<CheckBox Content="分区074"   Margin="6"/>
+									<CheckBox Content="分区075"   Margin="6"/>
+									<CheckBox Content="分区076"   Margin="6"/>
+									<CheckBox Content="分区077"   Margin="6"/>
+									<CheckBox Content="分区078"   Margin="6"/>
+									<CheckBox Content="分区079"   Margin="6"/>
+									<CheckBox Content="分区080"   Margin="6"/>
+									<CheckBox Content="分区081"   Margin="6"/>
+									<CheckBox Content="分区082"   Margin="6"/>
+									<CheckBox Content="分区083"   Margin="6"/>
+									<CheckBox Content="分区084"   Margin="6"/>
+									<CheckBox Content="分区085"   Margin="6"/>
+									<CheckBox Content="分区086"   Margin="6"/>
+									<CheckBox Content="分区087"   Margin="6"/>
+									<CheckBox Content="分区088"   Margin="6"/>
+									<CheckBox Content="分区089"   Margin="6"/>
+									<CheckBox Content="分区090"   Margin="6"/>
+									<CheckBox Content="分区091"   Margin="6"/>
+									<CheckBox Content="分区092"   Margin="6"/>
+									<CheckBox Content="分区093"   Margin="6"/>
+									<CheckBox Content="分区094"   Margin="6"/>
+									<CheckBox Content="分区095"   Margin="6"/>
+									<CheckBox Content="分区096"   Margin="6"/>
+									<CheckBox Content="分区097"   Margin="6"/>
+									<CheckBox Content="分区098"   Margin="6"/>
+									<CheckBox Content="分区099"   Margin="6"/>
+									<CheckBox Content="分区100"   Margin="6"/>
+									<CheckBox Content="分区101"   Margin="6"/>
+									<CheckBox Content="分区102"   Margin="6"/>
+									<CheckBox Content="分区103"   Margin="6"/>
+									<CheckBox Content="分区104"   Margin="6"/>
+									<CheckBox Content="分区105"   Margin="6"/>
+									<CheckBox Content="分区106"   Margin="6"/>
+									<CheckBox Content="分区107"   Margin="6"/>
+									<CheckBox Content="分区108"   Margin="6"/>
+									<CheckBox Content="分区109"   Margin="6"/>
+									<CheckBox Content="分区110"   Margin="6"/>
+									<CheckBox Content="分区111"   Margin="6"/>
+									<CheckBox Content="分区112"   Margin="6"/>
+									<CheckBox Content="分区113"   Margin="6"/>
+									<CheckBox Content="分区114"   Margin="6"/>
+									<CheckBox Content="分区115"   Margin="6"/>
+									<CheckBox Content="分区116"   Margin="6"/>
+									<CheckBox Content="分区117"   Margin="6"/>
+									<CheckBox Content="分区118"   Margin="6"/>
+									<CheckBox Content="分区119"   Margin="6"/>
+									<CheckBox Content="分区120"   Margin="6"/>
+									<CheckBox Content="分区121"   Margin="6"/>
+									<CheckBox Content="分区122"   Margin="6"/>
+									<CheckBox Content="分区123"   Margin="6"/>
+									<CheckBox Content="分区124"   Margin="6"/>
+									<CheckBox Content="分区125"   Margin="6"/>
+									<CheckBox Content="分区126"   Margin="6"/>
+									<CheckBox Content="分区127"   Margin="6"/>
+									<CheckBox Content="分区128"   Margin="6"/>
+								</WrapPanel>
+							</Grid>
+						</TabItem>
+						<TabItem Header="分区故障状态(勾选为故障)">
+							<Grid Background="#FFE5E5E5">
+								<WrapPanel Height="auto"  Margin="0,0,174,0" Width="auto" HorizontalAlignment ="Stretch" VerticalAlignment="Stretch" >
+									<CheckBox Content="分区001"   Margin="6"/>
+									<CheckBox Content="分区002"   Margin="6"/>
+									<CheckBox Content="分区003"   Margin="6"/>
+									<CheckBox Content="分区004"   Margin="6"/>
+									<CheckBox Content="分区005"   Margin="6"/>
+									<CheckBox Content="分区006"   Margin="6"/>
+									<CheckBox Content="分区007"   Margin="6"/>
+									<CheckBox Content="分区008"   Margin="6"/>
+									<CheckBox Content="分区009"   Margin="6"/>
+									<CheckBox Content="分区010"   Margin="6"/>
+									<CheckBox Content="分区011"   Margin="6"/>
+									<CheckBox Content="分区012"   Margin="6"/>
+									<CheckBox Content="分区013"   Margin="6"/>
+									<CheckBox Content="分区014"   Margin="6"/>
+									<CheckBox Content="分区015"   Margin="6"/>
+									<CheckBox Content="分区016"   Margin="6"/>
+									<CheckBox Content="分区017"   Margin="6"/>
+									<CheckBox Content="分区018"   Margin="6"/>
+									<CheckBox Content="分区019"   Margin="6"/>
+									<CheckBox Content="分区020"   Margin="6"/>
+									<CheckBox Content="分区021"   Margin="6"/>
+									<CheckBox Content="分区022"   Margin="6"/>
+									<CheckBox Content="分区023"   Margin="6"/>
+									<CheckBox Content="分区024"   Margin="6"/>
+									<CheckBox Content="分区025"   Margin="6"/>
+									<CheckBox Content="分区026"   Margin="6"/>
+									<CheckBox Content="分区027"   Margin="6"/>
+									<CheckBox Content="分区028"   Margin="6"/>
+									<CheckBox Content="分区029"   Margin="6"/>
+									<CheckBox Content="分区030"   Margin="6"/>
+									<CheckBox Content="分区031"   Margin="6"/>
+									<CheckBox Content="分区032"   Margin="6"/>
+									<CheckBox Content="分区033"   Margin="6"/>
+									<CheckBox Content="分区034"   Margin="6"/>
+									<CheckBox Content="分区035"   Margin="6"/>
+									<CheckBox Content="分区036"   Margin="6"/>
+									<CheckBox Content="分区037"   Margin="6"/>
+									<CheckBox Content="分区038"   Margin="6"/>
+									<CheckBox Content="分区039"   Margin="6"/>
+									<CheckBox Content="分区040"   Margin="6"/>
+									<CheckBox Content="分区041"   Margin="6"/>
+									<CheckBox Content="分区042"   Margin="6"/>
+									<CheckBox Content="分区043"   Margin="6"/>
+									<CheckBox Content="分区044"   Margin="6"/>
+									<CheckBox Content="分区045"   Margin="6"/>
+									<CheckBox Content="分区046"   Margin="6"/>
+									<CheckBox Content="分区047"   Margin="6"/>
+									<CheckBox Content="分区048"   Margin="6"/>
+									<CheckBox Content="分区049"   Margin="6"/>
+									<CheckBox Content="分区050"   Margin="6"/>
+									<CheckBox Content="分区051"   Margin="6"/>
+									<CheckBox Content="分区052"   Margin="6"/>
+									<CheckBox Content="分区053"   Margin="6"/>
+									<CheckBox Content="分区054"   Margin="6"/>
+									<CheckBox Content="分区055"   Margin="6"/>
+									<CheckBox Content="分区056"   Margin="6"/>
+									<CheckBox Content="分区057"   Margin="6"/>
+									<CheckBox Content="分区058"   Margin="6"/>
+									<CheckBox Content="分区059"   Margin="6"/>
+									<CheckBox Content="分区060"   Margin="6"/>
+									<CheckBox Content="分区061"   Margin="6"/>
+									<CheckBox Content="分区062"   Margin="6"/>
+									<CheckBox Content="分区063"   Margin="6"/>
+									<CheckBox Content="分区064"   Margin="6"/>
+									<CheckBox Content="分区066"   Margin="6"/>
+									<CheckBox Content="分区066"   Margin="6"/>
+									<CheckBox Content="分区067"   Margin="6"/>
+									<CheckBox Content="分区068"   Margin="6"/>
+									<CheckBox Content="分区069"   Margin="6"/>
+									<CheckBox Content="分区070"   Margin="6"/>
+									<CheckBox Content="分区071"   Margin="6"/>
+									<CheckBox Content="分区072"   Margin="6"/>
+									<CheckBox Content="分区073"   Margin="6"/>
+									<CheckBox Content="分区074"   Margin="6"/>
+									<CheckBox Content="分区075"   Margin="6"/>
+									<CheckBox Content="分区076"   Margin="6"/>
+									<CheckBox Content="分区077"   Margin="6"/>
+									<CheckBox Content="分区078"   Margin="6"/>
+									<CheckBox Content="分区079"   Margin="6"/>
+									<CheckBox Content="分区080"   Margin="6"/>
+									<CheckBox Content="分区081"   Margin="6"/>
+									<CheckBox Content="分区082"   Margin="6"/>
+									<CheckBox Content="分区083"   Margin="6"/>
+									<CheckBox Content="分区084"   Margin="6"/>
+									<CheckBox Content="分区085"   Margin="6"/>
+									<CheckBox Content="分区086"   Margin="6"/>
+									<CheckBox Content="分区087"   Margin="6"/>
+									<CheckBox Content="分区088"   Margin="6"/>
+									<CheckBox Content="分区089"   Margin="6"/>
+									<CheckBox Content="分区090"   Margin="6"/>
+									<CheckBox Content="分区091"   Margin="6"/>
+									<CheckBox Content="分区092"   Margin="6"/>
+									<CheckBox Content="分区093"   Margin="6"/>
+									<CheckBox Content="分区094"   Margin="6"/>
+									<CheckBox Content="分区095"   Margin="6"/>
+									<CheckBox Content="分区096"   Margin="6"/>
+									<CheckBox Content="分区097"   Margin="6"/>
+									<CheckBox Content="分区098"   Margin="6"/>
+									<CheckBox Content="分区099"   Margin="6"/>
+									<CheckBox Content="分区100"   Margin="6"/>
+									<CheckBox Content="分区101"   Margin="6"/>
+									<CheckBox Content="分区102"   Margin="6"/>
+									<CheckBox Content="分区103"   Margin="6"/>
+									<CheckBox Content="分区104"   Margin="6"/>
+									<CheckBox Content="分区105"   Margin="6"/>
+									<CheckBox Content="分区106"   Margin="6"/>
+									<CheckBox Content="分区107"   Margin="6"/>
+									<CheckBox Content="分区108"   Margin="6"/>
+									<CheckBox Content="分区109"   Margin="6"/>
+									<CheckBox Content="分区110"   Margin="6"/>
+									<CheckBox Content="分区111"   Margin="6"/>
+									<CheckBox Content="分区112"   Margin="6"/>
+									<CheckBox Content="分区113"   Margin="6"/>
+									<CheckBox Content="分区114"   Margin="6"/>
+									<CheckBox Content="分区115"   Margin="6"/>
+									<CheckBox Content="分区116"   Margin="6"/>
+									<CheckBox Content="分区117"   Margin="6"/>
+									<CheckBox Content="分区118"   Margin="6"/>
+									<CheckBox Content="分区119"   Margin="6"/>
+									<CheckBox Content="分区120"   Margin="6"/>
+									<CheckBox Content="分区121"   Margin="6"/>
+									<CheckBox Content="分区122"   Margin="6"/>
+									<CheckBox Content="分区123"   Margin="6"/>
+									<CheckBox Content="分区124"   Margin="6"/>
+									<CheckBox Content="分区125"   Margin="6"/>
+									<CheckBox Content="分区126"   Margin="6"/>
+									<CheckBox Content="分区127"   Margin="6"/>
+									<CheckBox Content="分区128"   Margin="6"/>
+								</WrapPanel>
+							</Grid>
+						</TabItem>						
+						<TabItem Header="分区注册状态(勾选为注册)">
+							<Grid Background="#FFE5E5E5">
+								<WrapPanel Height="auto"  Margin="0,0,174,0" Width="auto" HorizontalAlignment ="Stretch" VerticalAlignment="Stretch" >
+									<CheckBox Content="分区001"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区002"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区003"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区004"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区005"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区006"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区007"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区008"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区009"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区010"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区011"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区012"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区013"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区014"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区015"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区016"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区017"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区018"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区019"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区020"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区021"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区022"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区023"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区024"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区025"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区026"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区027"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区028"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区029"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区030"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区031"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区032"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区033"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区034"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区035"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区036"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区037"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区038"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区039"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区040"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区041"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区042"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区043"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区044"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区045"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区046"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区047"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区048"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区049"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区050"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区051"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区052"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区053"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区054"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区055"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区056"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区057"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区058"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区059"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区060"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区061"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区062"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区063"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区064"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区066"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区066"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区067"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区068"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区069"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区070"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区071"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区072"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区073"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区074"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区075"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区076"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区077"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区078"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区079"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区080"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区081"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区082"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区083"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区084"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区085"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区086"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区087"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区088"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区089"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区090"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区091"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区092"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区093"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区094"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区095"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区096"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区097"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区098"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区099"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区100"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区101"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区102"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区103"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区104"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区105"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区106"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区107"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区108"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区109"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区110"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区111"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区112"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区113"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区114"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区115"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区116"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区117"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区118"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区119"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区120"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区121"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区122"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区123"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区124"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区125"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区126"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区127"    IsChecked="True" Margin="6"/>
+									<CheckBox Content="分区128"    IsChecked="True" Margin="6"/>
+								</WrapPanel>
+							</Grid>
+						</TabItem>
+						<TabItem Header="扩展喇叭故障(勾选为故障)">
+							<Grid Background="#FFE5E5E5">
+								<WrapPanel Height="auto"  Margin="0,0,174,0" Width="auto" HorizontalAlignment ="Stretch" VerticalAlignment="Stretch" >
+									<CheckBox Content="分区001"   Margin="6"/>
+									<CheckBox Content="分区002"   Margin="6"/>
+									<CheckBox Content="分区003"   Margin="6"/>
+									<CheckBox Content="分区004"   Margin="6"/>
+									<CheckBox Content="分区005"   Margin="6"/>
+									<CheckBox Content="分区006"   Margin="6"/>
+									<CheckBox Content="分区007"   Margin="6"/>
+									<CheckBox Content="分区008"   Margin="6"/>
+									<CheckBox Content="分区009"   Margin="6"/>
+									<CheckBox Content="分区010"   Margin="6"/>
+									<CheckBox Content="分区011"   Margin="6"/>
+									<CheckBox Content="分区012"   Margin="6"/>
+									<CheckBox Content="分区013"   Margin="6"/>
+									<CheckBox Content="分区014"   Margin="6"/>
+									<CheckBox Content="分区015"   Margin="6"/>
+									<CheckBox Content="分区016"   Margin="6"/>
+									<CheckBox Content="分区017"   Margin="6"/>
+									<CheckBox Content="分区018"   Margin="6"/>
+									<CheckBox Content="分区019"   Margin="6"/>
+									<CheckBox Content="分区020"   Margin="6"/>
+									<CheckBox Content="分区021"   Margin="6"/>
+									<CheckBox Content="分区022"   Margin="6"/>
+									<CheckBox Content="分区023"   Margin="6"/>
+									<CheckBox Content="分区024"   Margin="6"/>
+									<CheckBox Content="分区025"   Margin="6"/>
+									<CheckBox Content="分区026"   Margin="6"/>
+									<CheckBox Content="分区027"   Margin="6"/>
+									<CheckBox Content="分区028"   Margin="6"/>
+									<CheckBox Content="分区029"   Margin="6"/>
+									<CheckBox Content="分区030"   Margin="6"/>
+									<CheckBox Content="分区031"   Margin="6"/>
+									<CheckBox Content="分区032"   Margin="6"/>
+									<CheckBox Content="分区033"   Margin="6"/>
+									<CheckBox Content="分区034"   Margin="6"/>
+									<CheckBox Content="分区035"   Margin="6"/>
+									<CheckBox Content="分区036"   Margin="6"/>
+									<CheckBox Content="分区037"   Margin="6"/>
+									<CheckBox Content="分区038"   Margin="6"/>
+									<CheckBox Content="分区039"   Margin="6"/>
+									<CheckBox Content="分区040"   Margin="6"/>
+									<CheckBox Content="分区041"   Margin="6"/>
+									<CheckBox Content="分区042"   Margin="6"/>
+									<CheckBox Content="分区043"   Margin="6"/>
+									<CheckBox Content="分区044"   Margin="6"/>
+									<CheckBox Content="分区045"   Margin="6"/>
+									<CheckBox Content="分区046"   Margin="6"/>
+									<CheckBox Content="分区047"   Margin="6"/>
+									<CheckBox Content="分区048"   Margin="6"/>
+									<CheckBox Content="分区049"   Margin="6"/>
+									<CheckBox Content="分区050"   Margin="6"/>
+									<CheckBox Content="分区051"   Margin="6"/>
+									<CheckBox Content="分区052"   Margin="6"/>
+									<CheckBox Content="分区053"   Margin="6"/>
+									<CheckBox Content="分区054"   Margin="6"/>
+									<CheckBox Content="分区055"   Margin="6"/>
+									<CheckBox Content="分区056"   Margin="6"/>
+									<CheckBox Content="分区057"   Margin="6"/>
+									<CheckBox Content="分区058"   Margin="6"/>
+									<CheckBox Content="分区059"   Margin="6"/>
+									<CheckBox Content="分区060"   Margin="6"/>
+									<CheckBox Content="分区061"   Margin="6"/>
+									<CheckBox Content="分区062"   Margin="6"/>
+									<CheckBox Content="分区063"   Margin="6"/>
+									<CheckBox Content="分区064"   Margin="6"/>
+									<CheckBox Content="分区066"   Margin="6"/>
+									<CheckBox Content="分区066"   Margin="6"/>
+									<CheckBox Content="分区067"   Margin="6"/>
+									<CheckBox Content="分区068"   Margin="6"/>
+									<CheckBox Content="分区069"   Margin="6"/>
+									<CheckBox Content="分区070"   Margin="6"/>
+									<CheckBox Content="分区071"   Margin="6"/>
+									<CheckBox Content="分区072"   Margin="6"/>
+									<CheckBox Content="分区073"   Margin="6"/>
+									<CheckBox Content="分区074"   Margin="6"/>
+									<CheckBox Content="分区075"   Margin="6"/>
+									<CheckBox Content="分区076"   Margin="6"/>
+									<CheckBox Content="分区077"   Margin="6"/>
+									<CheckBox Content="分区078"   Margin="6"/>
+									<CheckBox Content="分区079"   Margin="6"/>
+									<CheckBox Content="分区080"   Margin="6"/>
+									<CheckBox Content="分区081"   Margin="6"/>
+									<CheckBox Content="分区082"   Margin="6"/>
+									<CheckBox Content="分区083"   Margin="6"/>
+									<CheckBox Content="分区084"   Margin="6"/>
+									<CheckBox Content="分区085"   Margin="6"/>
+									<CheckBox Content="分区086"   Margin="6"/>
+									<CheckBox Content="分区087"   Margin="6"/>
+									<CheckBox Content="分区088"   Margin="6"/>
+									<CheckBox Content="分区089"   Margin="6"/>
+									<CheckBox Content="分区090"   Margin="6"/>
+									<CheckBox Content="分区091"   Margin="6"/>
+									<CheckBox Content="分区092"   Margin="6"/>
+									<CheckBox Content="分区093"   Margin="6"/>
+									<CheckBox Content="分区094"   Margin="6"/>
+									<CheckBox Content="分区095"   Margin="6"/>
+									<CheckBox Content="分区096"   Margin="6"/>
+									<CheckBox Content="分区097"   Margin="6"/>
+									<CheckBox Content="分区098"   Margin="6"/>
+									<CheckBox Content="分区099"   Margin="6"/>
+									<CheckBox Content="分区100"   Margin="6"/>
+									<CheckBox Content="分区101"   Margin="6"/>
+									<CheckBox Content="分区102"   Margin="6"/>
+									<CheckBox Content="分区103"   Margin="6"/>
+									<CheckBox Content="分区104"   Margin="6"/>
+									<CheckBox Content="分区105"   Margin="6"/>
+									<CheckBox Content="分区106"   Margin="6"/>
+									<CheckBox Content="分区107"   Margin="6"/>
+									<CheckBox Content="分区108"   Margin="6"/>
+									<CheckBox Content="分区109"   Margin="6"/>
+									<CheckBox Content="分区110"   Margin="6"/>
+									<CheckBox Content="分区111"   Margin="6"/>
+									<CheckBox Content="分区112"   Margin="6"/>
+									<CheckBox Content="分区113"   Margin="6"/>
+									<CheckBox Content="分区114"   Margin="6"/>
+									<CheckBox Content="分区115"   Margin="6"/>
+									<CheckBox Content="分区116"   Margin="6"/>
+									<CheckBox Content="分区117"   Margin="6"/>
+									<CheckBox Content="分区118"   Margin="6"/>
+									<CheckBox Content="分区119"   Margin="6"/>
+									<CheckBox Content="分区120"   Margin="6"/>
+									<CheckBox Content="分区121"   Margin="6"/>
+									<CheckBox Content="分区122"   Margin="6"/>
+									<CheckBox Content="分区123"   Margin="6"/>
+									<CheckBox Content="分区124"   Margin="6"/>
+									<CheckBox Content="分区125"   Margin="6"/>
+									<CheckBox Content="分区126"   Margin="6"/>
+									<CheckBox Content="分区127"   Margin="6"/>
+									<CheckBox Content="分区128"   Margin="6"/>
+								</WrapPanel>
+							</Grid>
+						</TabItem>
+						<TabItem Header="功放状态和其它">
+							<WrapPanel>
+								<GroupBox Header="功放注册状态" Width="104">
+									<ScrollViewer>
+										<WrapPanel>
+											<CheckBox Content="功放0" Margin="6" IsChecked="True" />
+											<CheckBox Content="功放1" Margin="6" IsChecked="True" />
+											<CheckBox Content="功放2" Margin="6" IsChecked="True" />
+											<CheckBox Content="功放3" Margin="6" IsChecked="True" />
+											<CheckBox Content="功放4" Margin="6" IsChecked="True" />
+											<CheckBox Content="功放5" Margin="6" IsChecked="True" />
+											<CheckBox Content="功放6" Margin="6" IsChecked="True" />
+											<CheckBox Content="功放7" Margin="6" IsChecked="True" />
+											<CheckBox Content="功放8" Margin="6" IsChecked="True" />
+											<CheckBox Content="功放9" Margin="6" IsChecked="True" />
+											<CheckBox Content="功放10" Margin="6" IsChecked="True" />
+											<CheckBox Content="功放11" Margin="6" IsChecked="True" />
+											<CheckBox Content="功放12" Margin="6" IsChecked="True" />
+											<CheckBox Content="功放13" Margin="6" IsChecked="True" />
+											<CheckBox Content="功放14" Margin="6" IsChecked="True" />
+											<CheckBox Content="功放15" Margin="6" IsChecked="True" />
+											<CheckBox Content="功放16" Margin="6" IsChecked="True" />
+											<CheckBox Content="功放17" Margin="6" IsChecked="True" />
+											<CheckBox Content="功放18" Margin="6" IsChecked="True" />
+											<CheckBox Content="功放19" Margin="6" IsChecked="True" />
+											<CheckBox Content="功放20" Margin="6" IsChecked="True" />
+										</WrapPanel>
+									</ScrollViewer>
+								</GroupBox>
+								<GroupBox Header="功放屏蔽状态" Width="104">
+									<ScrollViewer>
+										<WrapPanel>
+											<CheckBox Content="功放0" Margin="6"/>
+											<CheckBox Content="功放1" Margin="6"/>
+											<CheckBox Content="功放2" Margin="6"/>
+											<CheckBox Content="功放3" Margin="6"/>
+											<CheckBox Content="功放4" Margin="6"/>
+											<CheckBox Content="功放5" Margin="6"/>
+											<CheckBox Content="功放6" Margin="6"/>
+											<CheckBox Content="功放7" Margin="6"/>
+											<CheckBox Content="功放8" Margin="6"/>
+											<CheckBox Content="功放9" Margin="6"/>
+											<CheckBox Content="功放10" Margin="6"/>
+											<CheckBox Content="功放11" Margin="6"/>
+											<CheckBox Content="功放12" Margin="6"/>
+											<CheckBox Content="功放13" Margin="6"/>
+											<CheckBox Content="功放14" Margin="6"/>
+											<CheckBox Content="功放15" Margin="6"/>
+											<CheckBox Content="功放16" Margin="6"/>
+											<CheckBox Content="功放17" Margin="6"/>
+											<CheckBox Content="功放18" Margin="6"/>
+											<CheckBox Content="功放19" Margin="6"/>
+											<CheckBox Content="功放20" Margin="6"/>
+										</WrapPanel>
+									</ScrollViewer>
+								</GroupBox>
+								<GroupBox Header="功放状态设置" Width="160" >
+									<WrapPanel>										
+										<RadioButton Content="功放0" Margin="6"/>
+										<RadioButton Content="功放1" Margin="6"/>
+										<RadioButton Content="功放2" Margin="6"/>
+										<RadioButton Content="功放3" Margin="6"/>
+										<RadioButton Content="功放4" Margin="6"/>
+										<RadioButton Content="功放5" Margin="6"/>
+										<RadioButton Content="功放6" Margin="6"/>
+										<RadioButton Content="功放7" Margin="6"/>
+										<RadioButton Content="功放8" Margin="6"/>
+										<RadioButton Content="功放9" Margin="6"/>
+										<RadioButton Content="功放10" Margin="6"/>
+										<RadioButton Content="功放11" Margin="6"/>
+										<RadioButton Content="功放12" Margin="6"/>
+										<RadioButton Content="功放13" Margin="6"/>
+										<RadioButton Content="功放14" Margin="6"/>
+										<RadioButton Content="功放15" Margin="6"/>
+										<RadioButton Content="功放16" Margin="6"/>
+										<RadioButton Content="功放17" Margin="6"/>
+										<RadioButton Content="功放18" Margin="6"/>
+										<RadioButton Content="功放19" Margin="6"/>
+										<RadioButton Content="功放20" Margin="6"/>	
+										
+										<CheckBox Content="通讯故障状态标记"  Margin="6"  Name="chk_CommunicateErrorFlag"/>
+										<CheckBox Content="输出故障状态标记"  Margin="6" Name ="chk_OutputErrorFlag"/>
+										<CheckBox Content="备电故障状态标记"  Margin="6" Name ="chk_SpErrorFlag"/>
+										<CheckBox Content="主电故障状态标记"  Margin="6" Name ="chk_MpErrorFlag"/>
+									</WrapPanel>									
+								</GroupBox>
+							</WrapPanel>
+						</TabItem>
+						
+					</TabControl>
+				</Grid>
+			</TabItem>
+			<TabItem Header="用户设置状态">
+				<Grid Background="Beige"></Grid>
+			</TabItem>
+		</TabControl>
+
+	</Grid>
 </Window>
