@@ -766,6 +766,32 @@
 										<CheckBox Content="备电故障状态标记"  Margin="6" KeyDown="CheckBox_KeyDown" Name ="chk_SpErrorFlag"/>
 										<CheckBox Content="主电故障状态标记"  Margin="6" KeyDown="CheckBox_KeyDown" Name ="chk_MpErrorFlag"/>
 									</WrapPanel>									
+								</GroupBox>								
+								<GroupBox Header="其他逻辑状态" Width="200" >
+									<WrapPanel>
+										<Label Content="应急状态" />
+										<TextBox Text="0" Margin="5" Name="txtEmergencyStatus"/>
+										<Label Content="消音状态" />
+										<TextBox Text="0" Margin="5" Name="txtBeepEraseStatus"/>
+										<Label Content="通播状态"/>
+										<TextBox Text="0" Margin="5" Name="txtAllStatus"/>
+										<Label Content="通用状态" />
+										<TextBox Text=""  Margin="5" Name="txtCommonStatus"/>
+										<Label Content="分区地址分配" />
+										<TextBox Text="" Margin="5" Name="txtMainpointAddress"/>
+										<TextBox Text="" Margin="5" Name="txtPationStartAddress"/>
+										<Label Content="~"/>
+										<TextBox Text="" Margin="5" Name="txtPationEndAddress"/>
+										<Label Content="补充状态" />
+										<TextBox Text="" Margin="5" Name="txtAdditionalStatus"/>
+										<Label Content="自检状态" />
+										<TextBox Text="" Margin="5" Name="txtSelfCheckStatus"/>
+										<Label Content="复位状态" />
+										<TextBox Text="" Margin="5" Name="txtResetStatus"/>
+										<Label Content="波特率" />
+										<TextBox Text="" Margin="5" Name="txtBaudrate"/>
+									</WrapPanel>
+									
 								</GroupBox>
 								<GroupBox Header="音源串口设置" Width="100">
 									<WrapPanel VerticalAlignment="Center">
@@ -775,14 +801,6 @@
 										<ComboBox Name="cobBaudrate" Width="80" PreviewMouseDown="CobBaudrate_PreviewMouseDown" SelectionChanged="CobBaudrate_SelectionChanged" />
 										<Button Content="确定" HorizontalAlignment="Center" Margin="25" Click="Button_Click"/>
 									</WrapPanel>
-								</GroupBox>
-								<GroupBox Header="其他逻辑状态" Width="200" >
-									<WrapPanel>
-										<Label Content="应急状态" />
-										<TextBlock Text="0" Margin="5"/>
-										
-									</WrapPanel>
-									
 								</GroupBox>
 							</WrapPanel>
 						</TabItem>
