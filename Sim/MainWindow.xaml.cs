@@ -41,6 +41,7 @@ namespace Sim
 		SerialPort serialPort;
 		string serial_name = string.Empty;
 		int serial_baudrate = 0;
+		int last_received_count = 0;
 
 		bool[] PationOnoffStatus = new bool[ 128 ];
 		bool[] PationHiddenStatus = new bool[ 128 ];
@@ -165,11 +166,15 @@ namespace Sim
 			if ((serial_name == string.Empty) || (serial_baudrate == 0)) {
 				MessageBox.Show( "请选择正常的串口名及波特率" );
 				return;
+			} else {
+				//实例化一个串口对象  用于仿真和通讯转接板之间的通讯
+				serialPort = new SerialPort( serial_name, serial_baudrate, Parity.None, 8, StopBits.One );
+				serialPort.Open();
 			}
 
 			if (timer == null) {
 				//开启定时器，用于实时刷新进度条、测试环节、测试项、测试值
-				timer = new System.Timers.Timer( 100 );   //实例化Timer类，设置间隔时间单位毫秒
+				timer = new System.Timers.Timer( 20 );   //实例化Timer类，设置间隔时间单位毫秒
 				timer.Elapsed += new ElapsedEventHandler( UpdateWork ); //到达时间的时候执行事件；     
 				timer.AutoReset = true;   //设置是执行一次（false）还是一直执行(true)；     
 				timer.Enabled = true;     //是否执行System.Timers.Timer.Elapsed事件； 
@@ -246,6 +251,12 @@ namespace Sim
 							}
 						}
 					}
+
+					//以下进行串口数据的应答操作
+					if((serialPort.BytesToRead != 0) && (last_received_count == serialPort.BytesToRead)) {
+						CheckReceivedData();
+					}
+					last_received_count = serialPort.BytesToRead;
 				}
 			} catch (Exception ex) {
 				MessageBox.Show( ex.ToString() );
@@ -259,5 +270,83 @@ namespace Sim
 			if(serialPort != null) { serialPort.Close();serialPort.Dispose(); }
 			cts.Cancel();
 		}
+
+		private void CheckReceivedData()
+		{
+			byte[] temp = new byte[serialPort.BytesToRead];
+			int index_of_header = 0;
+			for(index_of_header = 0; index_of_header < temp.Length; index_of_header++) {
+				if(temp[ index_of_header] == 0x68) {
+					break;
+				}
+			}
+
+			byte[] received_data = new byte[ temp[ index_of_header + 3 ] + 6 ];
+			int max_count = received_data.Length;
+			if((temp.Length - index_of_header) < received_data.Length) {
+				max_count = (temp.Length - index_of_header);
+			}
+			Buffer.BlockCopy( temp, index_of_header, received_data, 0, max_count );
+
+			switch (( Soundsource.soundsource_cmd )received_data[ 3 ]) {
+				case Soundsource.soundsource_cmd.Cmd_EmergencyControl:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_PationOnoffControl:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_PationHiddenControl:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_PationOnoffQuery:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_PationHiddenQuery:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_PationErrorQuery:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_BeepErase:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_PationAllControl:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_PationErrorControl:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_FlashAddressSet:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_FlashDataWrite:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_FlashDataRead:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_WorkingStatusQuery:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_PationAddressSet:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_PationWatchRightsSet:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_SelfCheck:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_PationRegisterControl:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_PationRegisterQuery:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_SpeakerErrorQuery:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_SpeakerErrorControl:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_Reset:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_AmpStatusQuery:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_BaudrateControl:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_AmpRegisterControl:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_AmpRegisterQuery:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_AmpHiddenControl:
+					break;
+				case Soundsource.soundsource_cmd.Cmd_AmpHiddenQuery:
+					break;
+				default:break;
+			}
+
+		}
+
 	}
 }

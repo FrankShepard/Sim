@@ -776,7 +776,14 @@
 										<Button Content="确定" HorizontalAlignment="Center" Margin="25" Click="Button_Click"/>
 									</WrapPanel>
 								</GroupBox>
-								
+								<GroupBox Header="其他逻辑状态" Width="200" >
+									<WrapPanel>
+										<Label Content="应急状态" />
+										<TextBlock Text="0" Margin="5"/>
+										
+									</WrapPanel>
+									
+								</GroupBox>
 							</WrapPanel>
 						</TabItem>
 						
