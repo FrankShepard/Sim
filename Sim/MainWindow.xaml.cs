@@ -322,14 +322,67 @@ namespace Sim
 					send_data [ 4 ] = 0x00;
 					break;
 				case Soundsource.soundsource_cmd.Cmd_PationOnoffControl:
-					int loc = 0x01;
-					for(int index = received_data[4] ;index <= received_data[5] ; index++ ) {
-						
+					bool[] temp_1 = new bool[ 32 ];
+					for (int byte_index = 6; byte_index < 10; byte_index++) {
+						for (int bit_index = 0; bit_index < 8; bit_index++) {
+							if ((received_data[ byte_index ] & (0x01 << bit_index)) != 0) {
+								temp_1[ (byte_index - 6) * 8 + bit_index ] = true;
+							}
+						}
 					}
+					//将数组数据提取到对应的有效数组中，并在控件中显示
+					Buffer.BlockCopy( temp_1, 0, PationOnoffStatus, received_data[ 4 ], (received_data[ 5 ] - received_data[ 4 ]) );
+					for(int index = received_data[4];index <= received_data[ 5 ]; index++) {
+						if (PationOnoffStatus[ index - 1 ]) {
+							Dispatcher.Invoke( new dlg_CheckedstatusSet( CheckedstatusSet ), (index - 1), wrpOnoff_stuaus, true, true );
+						} else {
+							Dispatcher.Invoke( new dlg_CheckedstatusSet( CheckedstatusSet ), (index - 1), wrpOnoff_stuaus, false, true );
+						}
+					}
+					send_data[ 1 ] = 0xff;
+					send_data[ 3 ] = 0x01;
+					send_data[ 4 ] = 0x00;
 					break;
 				case Soundsource.soundsource_cmd.Cmd_PationHiddenControl:
+					temp_1 = new bool[ 32 ];
+					for (int byte_index = 6; byte_index < 10; byte_index++) {
+						for (int bit_index = 0; bit_index < 8; bit_index++) {
+							if ((received_data[ byte_index ] & (0x01 << bit_index)) != 0) {
+								temp_1[ (byte_index - 6) * 8 + bit_index ] = true;
+							}
+						}
+					}
+					//将数组数据提取到对应的有效数组中，并在控件中显示
+					Buffer.BlockCopy( temp_1, 0, PationHiddenStatus, received_data[ 4 ], (received_data[ 5 ] - received_data[ 4 ]) );
+					for (int index = received_data[ 4 ]; index <= received_data[ 5 ]; index++) {
+						if (PationHiddenStatus[ index - 1 ]) {
+							Dispatcher.Invoke( new dlg_CheckedstatusSet( CheckedstatusSet ), (index - 1), wrpHidden_stuaus, true, true );
+						} else {
+							Dispatcher.Invoke( new dlg_CheckedstatusSet( CheckedstatusSet ), (index - 1), wrpHidden_stuaus, false, true );
+						}
+					}
+					send_data[ 1 ] = 0xff;
+					send_data[ 3 ] = 0x01;
+					send_data[ 4 ] = 0x00;
 					break;
 				case Soundsource.soundsource_cmd.Cmd_PationOnoffQuery:
+					int temp_2 = 9;
+					int temp_3 = 0;
+					for (int bit_index = received_data[ 4 ]; bit_index <= received_data[ 5 ]; bit_index++) {						
+						if (PationOnoffStatus[ bit_index ]) {
+							send_data[ temp_2 ] |= ( byte )(0x01 << temp_3);
+						} else {
+							send_data[ temp_2 ] &= ( byte )(~(0x01 << temp_3));
+						}
+						if( ++temp_3 >= 8) {
+							temp_3 = 0;
+							temp_2--;
+						}
+					}
+					send_data[ 1 ] = received_data[1];
+					send_data[ 3 ] = 0x06;
+					send_data[ 4 ] = received_data[4];
+					send_data[ 5 ] = received_data[5];
 					break;
 				case Soundsource.soundsource_cmd.Cmd_PationHiddenQuery:
 					break;
@@ -340,6 +393,26 @@ namespace Sim
 				case Soundsource.soundsource_cmd.Cmd_PationAllControl:
 					break;
 				case Soundsource.soundsource_cmd.Cmd_PationErrorControl:
+					temp_1 = new bool[ 32 ];
+					for (int byte_index = 6; byte_index < 10; byte_index++) {
+						for (int bit_index = 0; bit_index < 8; bit_index++) {
+							if ((received_data[ byte_index ] & (0x01 << bit_index)) != 0) {
+								temp_1[ (byte_index - 6) * 8 + bit_index ] = true;
+							}
+						}
+					}
+					//将数组数据提取到对应的有效数组中，并在控件中显示
+					Buffer.BlockCopy( temp_1, 0, PationErrorStatus, received_data[ 4 ], (received_data[ 5 ] - received_data[ 4 ]) );
+					for (int index = received_data[ 4 ]; index <= received_data[ 5 ]; index++) {
+						if (PationErrorStatus[ index - 1 ]) {
+							Dispatcher.Invoke( new dlg_CheckedstatusSet( CheckedstatusSet ), (index - 1), wrpError_stuaus, true, true );
+						} else {
+							Dispatcher.Invoke( new dlg_CheckedstatusSet( CheckedstatusSet ), (index - 1), wrpError_stuaus, false, true );
+						}
+					}
+					send_data[ 1 ] = 0xff;
+					send_data[ 3 ] = 0x01;
+					send_data[ 4 ] = 0x00;
 					break;
 				case Soundsource.soundsource_cmd.Cmd_FlashAddressSet:
 					break;
@@ -356,12 +429,52 @@ namespace Sim
 				case Soundsource.soundsource_cmd.Cmd_SelfCheck:
 					break;
 				case Soundsource.soundsource_cmd.Cmd_PationRegisterControl:
+					temp_1 = new bool[ 32 ];
+					for (int byte_index = 6; byte_index < 10; byte_index++) {
+						for (int bit_index = 0; bit_index < 8; bit_index++) {
+							if ((received_data[ byte_index ] & (0x01 << bit_index)) != 0) {
+								temp_1[ (byte_index - 6) * 8 + bit_index ] = true;
+							}
+						}
+					}
+					//将数组数据提取到对应的有效数组中，并在控件中显示
+					Buffer.BlockCopy( temp_1, 0, PationRegisterStatus, received_data[ 4 ], (received_data[ 5 ] - received_data[ 4 ]) );
+					for (int index = received_data[ 4 ]; index <= received_data[ 5 ]; index++) {
+						if (PationRegisterStatus[ index - 1 ]) {
+							Dispatcher.Invoke( new dlg_CheckedstatusSet( CheckedstatusSet ), (index - 1), wrpReigster_stuaus, true, true );
+						} else {
+							Dispatcher.Invoke( new dlg_CheckedstatusSet( CheckedstatusSet ), (index - 1), wrpReigster_stuaus, false, true );
+						}
+					}
+					send_data[ 1 ] = 0xff;
+					send_data[ 3 ] = 0x01;
+					send_data[ 4 ] = 0x00;
 					break;
 				case Soundsource.soundsource_cmd.Cmd_PationRegisterQuery:
 					break;
 				case Soundsource.soundsource_cmd.Cmd_SpeakerErrorQuery:
 					break;
 				case Soundsource.soundsource_cmd.Cmd_SpeakerErrorControl:
+					temp_1 = new bool[ 32 ];
+					for (int byte_index = 6; byte_index < 10; byte_index++) {
+						for (int bit_index = 0; bit_index < 8; bit_index++) {
+							if ((received_data[ byte_index ] & (0x01 << bit_index)) != 0) {
+								temp_1[ (byte_index - 6) * 8 + bit_index ] = true;
+							}
+						}
+					}
+					//将数组数据提取到对应的有效数组中，并在控件中显示
+					Buffer.BlockCopy( temp_1, 0, PationSpeakerErrorStatus, received_data[ 4 ], (received_data[ 5 ] - received_data[ 4 ]) );
+					for (int index = received_data[ 4 ]; index <= received_data[ 5 ]; index++) {
+						if (PationSpeakerErrorStatus[ index - 1 ]) {
+							Dispatcher.Invoke( new dlg_CheckedstatusSet( CheckedstatusSet ), (index - 1), wrpSpeakerError_stuaus, true, true );
+						} else {
+							Dispatcher.Invoke( new dlg_CheckedstatusSet( CheckedstatusSet ), (index - 1), wrpSpeakerError_stuaus, false, true );
+						}
+					}
+					send_data[ 1 ] = 0xff;
+					send_data[ 3 ] = 0x01;
+					send_data[ 4 ] = 0x00;
 					break;
 				case Soundsource.soundsource_cmd.Cmd_Reset:
 					break;
@@ -370,10 +483,50 @@ namespace Sim
 				case Soundsource.soundsource_cmd.Cmd_BaudrateControl:
 					break;
 				case Soundsource.soundsource_cmd.Cmd_AmpRegisterControl:
+					temp_1 = new bool[ 32 ];
+					for (int byte_index = 6; byte_index < 10; byte_index++) {
+						for (int bit_index = 0; bit_index < 8; bit_index++) {
+							if ((received_data[ byte_index ] & (0x01 << bit_index)) != 0) {
+								temp_1[ (byte_index - 6) * 8 + bit_index ] = true;
+							}
+						}
+					}
+					//将数组数据提取到对应的有效数组中，并在控件中显示
+					Buffer.BlockCopy( temp_1, 0, AmpRegisterStatus, received_data[ 4 ], (received_data[ 5 ] - received_data[ 4 ]) );
+					for (int index = received_data[ 4 ]; index <= received_data[ 5 ]; index++) {
+						if (AmpRegisterStatus[ index - 1 ]) {
+							Dispatcher.Invoke( new dlg_CheckedstatusSet( CheckedstatusSet ), (index - 1), wrpAmpResigster_stuaus, true, true );
+						} else {
+							Dispatcher.Invoke( new dlg_CheckedstatusSet( CheckedstatusSet ), (index - 1), wrpAmpResigster_stuaus, false, true );
+						}
+					}
+					send_data[ 1 ] = 0xff;
+					send_data[ 3 ] = 0x01;
+					send_data[ 4 ] = 0x00;
 					break;
 				case Soundsource.soundsource_cmd.Cmd_AmpRegisterQuery:
 					break;
 				case Soundsource.soundsource_cmd.Cmd_AmpHiddenControl:
+					temp_1 = new bool[ 32 ];
+					for (int byte_index = 6; byte_index < 10; byte_index++) {
+						for (int bit_index = 0; bit_index < 8; bit_index++) {
+							if ((received_data[ byte_index ] & (0x01 << bit_index)) != 0) {
+								temp_1[ (byte_index - 6) * 8 + bit_index ] = true;
+							}
+						}
+					}
+					//将数组数据提取到对应的有效数组中，并在控件中显示
+					Buffer.BlockCopy( temp_1, 0, AmpHiddenStatus, received_data[ 4 ], (received_data[ 5 ] - received_data[ 4 ]) );
+					for (int index = received_data[ 4 ]; index <= received_data[ 5 ]; index++) {
+						if (AmpHiddenStatus[ index - 1 ]) {
+							Dispatcher.Invoke( new dlg_CheckedstatusSet( CheckedstatusSet ), (index - 1), wrpAmpHidden_stuaus, true, true );
+						} else {
+							Dispatcher.Invoke( new dlg_CheckedstatusSet( CheckedstatusSet ), (index - 1), wrpAmpHidden_stuaus, false, true );
+						}
+					}
+					send_data[ 1 ] = 0xff;
+					send_data[ 3 ] = 0x01;
+					send_data[ 4 ] = 0x00;
 					break;
 				case Soundsource.soundsource_cmd.Cmd_AmpHiddenQuery:
 					break;
