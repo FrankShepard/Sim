@@ -775,14 +775,16 @@
 										<TextBox Text="0" Margin="5" Name="txtBeepEraseStatus"/>
 										<Label Content="通播状态"/>
 										<TextBox Text="0" Margin="5" Name="txtAllStatus"/>
+										<Label Content="											"/>
 										<Label Content="通用状态" />
 										<TextBox Text=""  Margin="5" Name="txtCommonStatus"/>
+										<Label Content="											"/>
 										<Label Content="分区地址分配" />
 										<TextBox Text="" Margin="5" Name="txtMainpointAddress"/>
 										<TextBox Text="" Margin="5" Name="txtPationStartAddress"/>
 										<Label Content="~"/>
 										<TextBox Text="" Margin="5" Name="txtPationEndAddress"/>
-										<Label Content="补充状态" />
+										<Label Content="屏蔽菜单状态" />
 										<TextBox Text="" Margin="5" Name="txtAdditionalStatus"/>
 										<Label Content="自检状态" />
 										<TextBox Text="" Margin="5" Name="txtSelfCheckStatus"/>
