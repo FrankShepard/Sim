@@ -766,6 +766,7 @@
 										<CheckBox Content="备电故障状态标记"  Margin="6" KeyDown="CheckBox_KeyDown" Name ="chk_SpErrorFlag"/>
 										<CheckBox Content="主电故障状态标记"  Margin="6" KeyDown="CheckBox_KeyDown" Name ="chk_MpErrorFlag"/>
 									</WrapPanel>									
+<<<<<<< HEAD
 								</GroupBox>								
 								<GroupBox Header="其他逻辑状态" Width="200" >
 									<WrapPanel>
@@ -794,6 +795,8 @@
 										<TextBox Text="" Margin="5" Name="txtBaudrate"/>
 									</WrapPanel>
 									
+=======
+>>>>>>> parent of 50093c9... 11
 								</GroupBox>
 								<GroupBox Header="音源串口设置" Width="100">
 									<WrapPanel VerticalAlignment="Center">
@@ -803,6 +806,14 @@
 										<ComboBox Name="cobBaudrate" Width="80" PreviewMouseDown="CobBaudrate_PreviewMouseDown" SelectionChanged="CobBaudrate_SelectionChanged" />
 										<Button Content="确定" HorizontalAlignment="Center" Margin="25" Click="Button_Click"/>
 									</WrapPanel>
+								</GroupBox>
+								<GroupBox Header="其他逻辑状态" Width="200" >
+									<WrapPanel>
+										<Label Content="应急状态" />
+										<TextBlock Text="0" Margin="5"/>
+										
+									</WrapPanel>
+									
 								</GroupBox>
 							</WrapPanel>
 						</TabItem>
