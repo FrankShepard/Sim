@@ -183,6 +183,7 @@ namespace Sim
 			}
 		}
 
+		private delegate void dlg_CheckedstatusSet( int index, WrapPanel wrapPanel, bool checked_status, bool is_checkbox );
 		private delegate object dlg_CheckedstatusGet(int index, WrapPanel wrapPanel, bool is_checkbox);
 
 		object CheckedstatusGet(int index ,WrapPanel wrapPanel ,bool is_checkbox)
@@ -195,7 +196,17 @@ namespace Sim
 				return rdb.IsChecked;
 			}
 		}
-			
+
+		void CheckedstatusSet( int index, WrapPanel wrapPanel, bool checked_status , bool is_checkbox )
+		{
+			if ( is_checkbox ) {
+				CheckBox chk = wrapPanel.Children [ index ] as CheckBox;
+				chk.IsChecked = checked_status;
+			} else {
+				RadioButton rdb = wrpAmpSetting_stuaus.Children [ index ] as RadioButton;
+				rdb.IsChecked = checked_status;
+			}
+		}
 
 		/// <summary>
 		/// 定时器中执行委托用于显示实时情况
@@ -271,7 +282,6 @@ namespace Sim
 			cts.Cancel();
 		}
 
-<<<<<<< HEAD
 		delegate object dlg_txtValueGet( TextBox textBox );
 		delegate void dlg_txtValueShow( TextBox textBox, string value );
 		void txtValueShow( TextBox textBox, string value )
@@ -284,8 +294,6 @@ namespace Sim
 			return textBox.Text;
 		}
 
-=======
->>>>>>> parent of 50093c9... 11
 		private void CheckReceivedData()
 		{
 			byte[] temp = new byte[serialPort.BytesToRead];
@@ -303,7 +311,6 @@ namespace Sim
 			}
 			Buffer.BlockCopy( temp, index_of_header, received_data, 0, max_count );
 
-<<<<<<< HEAD
 			byte [ ] send_data = new byte [ 20 ];
 			send_data [ 0 ] = 0x68;
 
@@ -335,12 +342,6 @@ namespace Sim
 					send_data[ 1 ] = 0xff;
 					send_data[ 3 ] = 0x01;
 					send_data[ 4 ] = 0x00;
-=======
-			switch (( Soundsource.soundsource_cmd )received_data[ 3 ]) {
-				case Soundsource.soundsource_cmd.Cmd_EmergencyControl:
-					break;
-				case Soundsource.soundsource_cmd.Cmd_PationOnoffControl:
->>>>>>> parent of 50093c9... 11
 					break;
 				case Soundsource.soundsource_cmd.Cmd_PationHiddenControl:
 					temp_1 = new bool[ 32 ];
