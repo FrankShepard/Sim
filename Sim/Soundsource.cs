@@ -11,7 +11,7 @@ namespace Sim
 		/// <summary>
 		/// 与音源单片机通讯的命令
 		/// </summary>
-		public enum soundsource_cmd:byte
+		public enum Soundsource_cmd:byte
 		{
 			Cmd_EmergencyControl = 0x00,
 			Cmd_PationOnoffControl = 0x01,
